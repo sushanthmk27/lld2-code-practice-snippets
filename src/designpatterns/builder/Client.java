@@ -26,7 +26,8 @@ public class Client {
 */
 
         // Way 3
-        StudentBuilder studentBuilder = new StudentBuilder();
+        /*StudentBuilder studentBuilder = new StudentBuilder();*/
+        StudentBuilder studentBuilder = Student.getStudentBuilderInstance();
         studentBuilder.setAge(25);
         studentBuilder.setEmail("abcd@123");
         studentBuilder.setName("Sushanth");

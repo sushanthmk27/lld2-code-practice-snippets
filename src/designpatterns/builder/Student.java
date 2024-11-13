@@ -27,6 +27,10 @@ public class Student {
 
     }
 
+    public static StudentBuilder getStudentBuilderInstance(){
+        return new StudentBuilder();
+    }
+
     public String getName() {
         return name;
     }
