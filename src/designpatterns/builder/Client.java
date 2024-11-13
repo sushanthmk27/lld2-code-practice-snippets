@@ -27,11 +27,18 @@ public class Client {
 
         // Way 3
         /*StudentBuilder studentBuilder = new StudentBuilder();*/
-        StudentBuilder studentBuilder = Student.getStudentBuilderInstance();
+
+
+        StudentBuilder studentBuilder = Student.getStudentBuilderInstance()
+                .setName("Sushanth")                                                        // This is method chaining
+                .setAge(25)
+                .setPsp(95.06)
+                .setEmail("abcd@ymail");
+/*
         studentBuilder.setAge(25);
         studentBuilder.setEmail("abcd@123");
         studentBuilder.setName("Sushanth");
-
+*/
         Student s = new Student(studentBuilder);
     }
 }
