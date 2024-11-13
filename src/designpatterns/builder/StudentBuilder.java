@@ -1,6 +1,6 @@
 package designpatterns.builder;
 
-public class StudentBuilder {
+/*public class StudentBuilder {
 
     // Here we are(can) adding all the attributes that we need to be added during OBJECT creation time
 
@@ -25,7 +25,7 @@ public class StudentBuilder {
 
     public StudentBuilder setName(String name) {        // by creating a setter method this way, the setter method will return the StudentBuilder class after setting the values and then to the returned object we can add other setter values
         this.name = name;
-        return this;
+        return this;                                // Here setName setter method is called by the StudentBuilder, which is why we are returning the same calling object by using 'this' keyword
     }
 
     public int getAge() {
@@ -63,4 +63,20 @@ public class StudentBuilder {
         this.university = university;
         return this;
     }
-}
+
+    // Validation can be done this way
+    public void validate(){
+        if(age < 20){
+           throw new IllegalArgumentException("Age is less than the set limit");
+        }
+    }
+
+    //Build method is added to remove seperate instance creation in the Client
+    public Student build(){
+        *//* return new Student(studentBuilder);*//*
+
+        // before assigning the memory to the object we do the necessary validations
+        validate();
+        return new Student(this);
+    }
+}*/

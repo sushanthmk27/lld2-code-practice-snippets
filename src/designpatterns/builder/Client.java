@@ -29,16 +29,25 @@ public class Client {
         /*StudentBuilder studentBuilder = new StudentBuilder();*/
 
 
-        StudentBuilder studentBuilder = Student.getStudentBuilderInstance()
+/*        StudentBuilder studentBuilder = Student.getStudentBuilderInstance()
                 .setName("Sushanth")                                                        // This is method chaining
                 .setAge(25)
                 .setPsp(95.06)
-                .setEmail("abcd@ymail");
+                .setEmail("abcd@ymail");*/
+
+        Student studentBuilder = Student.getStudentBuilderInstance()        // Here 2 objects are created  - Student and StudentBuilder
+                .setName("Sushanth")                                                        // This is method chaining
+                .setAge(25)
+                .setPsp(95.06)
+                .setEmail("abcd@ymail")
+                .build();
+
+        /*Student st = new Student(new StudentBuilder());  */       // To prevent the object creation this way we have to make the Constructor of Student class as private
 /*
         studentBuilder.setAge(25);
         studentBuilder.setEmail("abcd@123");
         studentBuilder.setName("Sushanth");
 */
-        Student s = new Student(studentBuilder);
+      /*  Student s = new Student(studentBuilder);*/
     }
 }
