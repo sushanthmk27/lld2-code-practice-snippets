@@ -3,10 +3,12 @@ package designpatterns.prototypeandregistry;
 public class Student implements Prototype {
     private String name;
     private int age;
+    private String batch;
 
-    public Student(String name, int age) {
+    public Student(String name, int age, String batch) {
         this.name = name;
         this.age = age;
+        this.batch = batch;
     }
 
     public int getAge() {
