@@ -1,6 +1,6 @@
 package designpatterns.prototypeandregistry;
 
-public class Student implements Prototype {
+public class Student implements Prototype<Student> {
     private String name;
     private int age;
     private String batch;
@@ -27,11 +27,20 @@ public class Student implements Prototype {
         this.name = name;
     }
 
+    public String getBatch() {
+        return batch;
+    }
+
+    public void setBatch(String batch) {
+        this.batch = batch;
+    }
+
 
     // Creation of copy constructor
     protected Student(Student student){
         this.name = student.name;
         this.age = student.age;
+        this.batch = student.batch;
     }
 
     // We write the implementation for the copy method here which creates a copy of the instance of the Student class
