@@ -22,7 +22,7 @@ public class StudentRegistery {
 
     // This  is a custom method to get the values from the hashMap based on the key
     public Student get(String key){
-        return regStdHMap.get(key).copy();
+        return regStdHMap.get(key).copy();     // Here regStdHMap.get(key) will return the Student obj reference based the key input to the hashMap and then using that Student obj reference we call the copy method from Student class to create a new instance and copy all the values defined in the constructor to the newly created Student object
     }
 
     public void fillRegistry(){
