@@ -5,14 +5,8 @@ import designpatterns.factory.databases.queries.SQLQuery;
 import designpatterns.factory.databases.transactions.Transcations;
 import designpatterns.factory.databases.updators.Updator;
 
-public class MySql implements Database{ //, DatabaseFactory {
+public class MongoDBFactory implements DatabaseFactory{
     @Override
-    public void getVersion() {
-
-    }
-
-    // Since the class have more number of methods, we are moving it to its respective Factory classes where we have the method implementations
-/*    @Override
     public Query createQuery() {
         return new SQLQuery();
     }
@@ -25,5 +19,5 @@ public class MySql implements Database{ //, DatabaseFactory {
     @Override
     public Updator createUpdator() {
         return null;
-    }*/
+    }
 }
