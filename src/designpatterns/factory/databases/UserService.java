@@ -13,12 +13,14 @@ public class UserService {
     }
 
     public void createUser(User user){
-        Query q = null;
+/*        Query q = null;
         if(database instanceof MySql ){
             q = new SQLQuery();
         }
         else if(database instanceof PGSql){
             q = new NoSQLQuery();
-        }
+        }*/
+
+        Query query = QueryFactory.getQueryByDatabase(database);
     }
 }
