@@ -12,6 +12,11 @@ public class MongoDB implements Database{   //,DatabaseFactory {
 
     }
 
+    @Override
+    public DatabaseFactory createDatabaseFactory() {
+        return new MongoDBFactory();
+    }
+
     // Since the class have more number of methods, we are moving it to its respective Factory classes where we have the method implementations
 /*    @Override
     public Query createQuery() {

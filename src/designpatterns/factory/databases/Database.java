@@ -12,5 +12,5 @@ public interface Database {
       Transcations createTransaction();   // Here since we are overloading the Database interface with too many factory methods, we will create a
       Updator createUpdator();*/         // separate DatabaseFactory interface and moe all the Factory methods to it
 
-
+    DatabaseFactory createDatabaseFactory();
 }

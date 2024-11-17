@@ -8,10 +8,14 @@ import designpatterns.factory.databases.updators.Updator;
 public class PGSql implements Database{ //, DatabaseFactory{
     @Override
     public void getVersion() {
-
     }
 
-// Since the class have more number of methods, we are moving it to its respective Factory classes where we have the method implementations
+    @Override
+    public DatabaseFactory createDatabaseFactory() {
+        return new PGSqlFactory();
+    }
+
+    // Since the class have more number of methods, we are moving it to its respective Factory classes where we have the method implementations
     /*    @Override
     public Query createQuery() {
         return new SQLQuery();
